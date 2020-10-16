@@ -1,0 +1,18 @@
+root@b3de46e10e34:~# gcc -c matrix_functions.c -O3
+matrix_functions.c: In function 'Matmul':
+matrix_functions.c:35:5: warning: implicit declaration of function 'gettimeofday' [-Wimplicit-function-declaration]
+     gettimeofday(&start, NULL);
+     ^
+root@b3de46e10e34:~# gcc -c matrix.c -O3
+matrix.c: In function 'main':
+matrix.c:37:13: warning: format '%d' expects argument of type 'int', but argument 2 has type 'size_t {aka long unsigned int}' [-Wformat=]
+      printf("size: %d time: %lf \n", N, r_time);
+             ^
+root@b3de46e10e34:~# gcc matrix.o matrix_functions.o -o matrix.exe
+root@b3de46e10e34:~# gcc -c matrix.c -O3^C
+root@b3de46e10e34:~# ./matrix.exe 
+size: 512 time: 0.299570 
+size: 1024 time: 4.968170 
+size: 2048 time: 59.409511 
+^C
+

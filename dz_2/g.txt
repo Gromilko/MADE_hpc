@@ -1,0 +1,17 @@
+(base) futura@futura-pc:/media/futura/samsung evo 1 TB/MADE/MADE-3/MADE_hpc/dz_2$ gcc -c matrix_functions.c -g
+matrix_functions.c: In function ‘Matmul’:
+matrix_functions.c:35:5: warning: implicit declaration of function ‘gettimeofday’ [-Wimplicit-function-declaration]
+     gettimeofday(&start, NULL);
+     ^
+(base) futura@futura-pc:/media/futura/samsung evo 1 TB/MADE/MADE-3/MADE_hpc/dz_2$ gcc -c matrix.c -g
+matrix.c: In function ‘main’:
+matrix.c:37:13: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+      printf("size: %d time: %lf \n", N, r_time);
+             ^
+(base) futura@futura-pc:/media/futura/samsung evo 1 TB/MADE/MADE-3/MADE_hpc/dz_2$ gcc matrix.o matrix_functions.o -o matrix.exe
+(base) futura@futura-pc:/media/futura/samsung evo 1 TB/MADE/MADE-3/MADE_hpc/dz_2$ ./matrix.exe
+size: 512 time: 0.811644 
+size: 1024 time: 7.420819 
+size: 2048 time: 164.117235 
+^C
+
