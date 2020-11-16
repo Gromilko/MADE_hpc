@@ -12,12 +12,12 @@ const size_t SHOW = 0;
 
 void init_field(int *field, int size, int prank, int psize)
 {
-	// for (int i = 0; i < size; ++i)
- //    	field[i] = rand() % 2;
-    for (int i = 0; i < size; ++i)
-    	field[i] = 0;
-    if(prank == 1)
-		field[1] = 1;
+	for (int i = 0; i < size; ++i)
+    	field[i] = rand() % 2;
+  //   for (int i = 0; i < size; ++i)
+  //   	field[i] = 0;
+  //   if(prank == 1)
+		// field[1] = 1;
 }
 
 
